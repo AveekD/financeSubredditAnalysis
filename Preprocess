@@ -6,9 +6,9 @@ from nltk.tokenize import RegexpTokenizer
 nltk.download('wordnet') 
 from nltk.stem.wordnet import WordNetLemmatizer
 corpus = []
-for i in range(0, df.size):
+for x in df['text']:
     #Remove punctuations
-    text = re.sub('[^a-zA-Z]', ' ', str(df['text'])[i])
+    text = re.sub('[^a-zA-Z]', ' ', str(x))
     
     #Convert to lowercase
     text = text.lower()
